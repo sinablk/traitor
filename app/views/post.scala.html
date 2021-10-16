@@ -1,7 +1,16 @@
+@*
+ * This page handles the rendering of the blog pos article. It takes the title
+ * of the blog post as a String and its content as HTML.
+ *@
 @(title: String, content: Html)
 
 @main(title) {
     <div class="post-content">
-        @content
+        <h1>@title</h1>
+
+        <article>
+            @content
+        </article>
+
     </div>
 }
