@@ -378,7 +378,7 @@ mapdf.plot()
 
 
 
-![png](/images/afgpops/output_32_1.png)
+![png](images/afgpops/output_32_1.png)
 
 
 Map file well imported! The `mapdf` is  a GeoDataFrame which is a Pandas dataframe for polygon map objects with a column called `geometery` that contains the coordinates of the objects. We need to inspect the province names because, for later plotting, we'll be joining it with our original population dataframe.
@@ -853,7 +853,7 @@ choropleth_df.plot(column='Total')
 
 
 
-![png](/images/afgpops/output_41_1.png)
+![png](images/afgpops/output_41_1.png)
 
 
 Perfect! Let's customize our choropleth to make it pretty :D
@@ -875,7 +875,7 @@ cbar = fig.colorbar(sm)
 ```
 
 
-![png](/images/afgpops/output_43_0.png)
+![png](images/afgpops/output_43_0.png)
 
 
 As we can see, most of the urban population is concentrated in Kabul province which houses the capital city, Kabul. The above graph shows the population in the given range of 1-100. Although, we can change the "scheme" of the map to `equal_interval` and `quantiles`, I think a better representation would be to bin the population in deciles. This is what I do with the following lines of code using the [Pysal](https://pysal.readthedocs.io/en/latest/) library:
@@ -924,7 +924,7 @@ leg.set_bbox_to_anchor((0., 0., 0.9, 0.7))
 ```
 
 
-![png](/images/afgpops/output_47_0.png)
+![png](images/afgpops/output_47_0.png)
 
 
 Visualizing urban and rural population counts across all provinces:
@@ -953,7 +953,7 @@ axes[0].axis('off') ; axes[1].axis('off')
 
 
 
-![png](/images/afgpops/output_49_1.png)
+![png](images/afgpops/output_49_1.png)
 
 
 

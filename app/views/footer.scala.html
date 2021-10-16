@@ -1,0 +1,16 @@
+@import java.util.Date
+
+@getYear() = @{
+    new Date().format("yyyy")
+}
+
+<footer>
+
+    <a href="#">Subscribe.</a>
+  
+    <span>
+        &copy; <time datetime="@getYear()">@getYear()</time>
+        Ali Sina. Powered by <a href="https://github.com/sinablk/traitor" target="_blank">Traitor</a>.
+    </span>
+  
+  </footer>

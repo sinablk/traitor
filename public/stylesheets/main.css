@@ -16,8 +16,20 @@
   padding-left: var(--spacing-unit);
 }
 
+/**
+* Post listings in the main page
+*/
 main ul {
   list-style: symbols(cyclic "⟫");
+}
+
+/** 
+* Footer
+*/
+footer {
+  border-top: 1px solid black;
+  padding: calc(var(--spacing-unit) / 2) 0;
+  text-align: center;
 }
 
 /**

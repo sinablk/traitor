@@ -2,7 +2,8 @@
 * This stylesheet defines the base styles of elements. This is basically to
 * reset all browser specific styles applied automatically, i.e. give the designer
 * a clean slate to work with. The others stylesheets may or may not override
-* the styles defined here.
+* the styles defined here. Don't add individual styling elements here. This is
+* just for reset. Add any styling to main.css.
 */
 
 @import "./defaults.css";
@@ -80,6 +81,7 @@ figure {
 main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
   margin-bottom: var(--spacing-unit);
+  flex: 1;
 }
 
 /**
