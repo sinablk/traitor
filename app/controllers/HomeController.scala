@@ -22,9 +22,9 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
   private val renderer = HtmlRenderer.builder().build()
 
   val listOfPosts: List[PostItem] = List(
-    PostItem("First blog post", href = "2021-01-01-hello-world.md"),
-    PostItem("Second blog post", href = "2021-01-02-scraping-data-off-a-webpage-for-visualization.md"),
-    PostItem("Third blog post", href = "2021-01-03-geospatial-plotting-with-python.md")
+    PostItem("Hello world", href = "2021-01-01-hello-world.md"),
+    PostItem("Scraping data off a webpage for visualization", href = "2021-01-02-scraping-data-off-a-webpage-for-visualization.md"),
+    PostItem("Geospatial plotting with Python", href = "2021-01-03-geospatial-plotting-with-python.md")
   )
 
   def index() = Action { implicit request: Request[AnyContent] =>
