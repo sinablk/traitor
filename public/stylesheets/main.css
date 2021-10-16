@@ -11,7 +11,7 @@
 */
 main {
   display: flex; 
-  width: 65%;
+  width: 80%;
   margin-left: 0.1vw;
   margin-top: 1vh;
   margin-bottom: var(--spacing-unit);
@@ -45,6 +45,7 @@ footer {
   margin-left: auto;
   padding-right: var(--spacing-unit);
   padding-left: var(--spacing-unit);
+  border-right: 1px dotted;
 }
 
 /**
@@ -52,10 +53,10 @@ footer {
 */
 .post-content {
   max-width: var(--max-width);
-  margin-right: 2%;
   margin-left: auto;
   padding-right: var(--spacing-unit);
-  padding-left: var(--spacing-unit)
+  padding-left: var(--spacing-unit);
+  border-right: 1px dotted;
 }
 
 /**
@@ -63,12 +64,11 @@ footer {
 */
 .sidebar {
   /* background-color: aliceblue; */
-  width: 16%;
+  width: 20%;
   box-sizing: border-box;
   padding: 20px;
-  border-left: 1px dotted;
-  height: 90%;
+  height: 100%;
   right: 20%;
   margin-right: 10px;
-  position:fixed
+  /* position:fixed; */
 }
