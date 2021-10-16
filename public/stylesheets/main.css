@@ -1,111 +1,32 @@
 /**
- * Variables
- */
-:root {
-    --base-font-weight: 400;
-    --base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    --base-font-size: 24px;
-    --base-line-height: 1.5;
-    --spacing-unit: 30px;
-    --headings-font-family: "Kreon", Helvetica, Arial, serif;
-}
+* Highly recommended read: https://hospodarets.com/you-might-not-need-a-css-preprocessor/#/
+*/
 
-html {
-    scroll-behavior: smooth;
-}
-
+@import "./base.css";
+@import "./defaults.css";
 
 /**
- * Reset some basic elements
- */
- body,
- h1,
- h2,
- h3,
- h4,
- h5,
- h6,
- p,
- blockquote,
- pre,
- hr,
- dl,
- dd,
- ol,
- ul,
- figure {
-   margin: 0;
-   padding: 0;
- }
- 
- /**
-  * Basic styling
-  */
- body {
-   font: var(--base-font-weight) calc(var(--base-font-size) / var(--base-line-height)) var(--base-font-family);
-   /* color: $text-color;
-   background-color: $background-color; */
-   -webkit-text-size-adjust: 100%;
-   -webkit-font-feature-settings: "kern" 1;
-   -moz-font-feature-settings: "kern" 1;
-   -o-font-feature-settings: "kern" 1;
-   font-feature-settings: "kern" 1;
-   font-kerning: normal;
-   display: flex;
-   min-height: 100vh;
-   flex-direction: column;
-   padding: 50px;
- }
- 
- /**
-  * Set `margin-bottom` to maintain vertical rhythm
-  */
- h1,
- h2,
- h3,
- h4,
- h5,
- h6,
- p,
- blockquote,
- pre,
- ul,
- ol,
- dl,
- figure {
-   margin-bottom: calc(var(--spacing-unit) / 2);
- }
+* Main page's posts list
+*/ 
+.posts-list {
+  max-width: var(--max-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing-unit);
+  padding-left: var(--spacing-unit);
+}
 
- h1 {
-     font-size: calc(2 * var(--base-font-size));
- }
- 
- /**
-  * `main` element
-  */
- main {
-   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
-   margin-bottom: var(--spacing-unit);
- }
- 
- /**
-  * Headings
-  */
- h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
-   font-family: var(--headings-font-family);
-   font-weight: var(--base-font-weight);
- }
- 
+main ul {
+  list-style: symbols(cyclic "⟫");
+}
+
+/**
+* Blog post content
+*/
 .post-content {
-  max-width:-webkit-calc(800px - (30px * 2));
-  max-width:calc(800px - (30px * 2));
-  margin-right:auto;
-  margin-left:auto;
-  padding-right:30px;
-  padding-left:30px
+  max-width: var(--max-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing-unit);
+  padding-left: var(--spacing-unit)
 }

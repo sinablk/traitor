@@ -1,0 +1,100 @@
+/**
+* This stylesheet defines the base styles of elements. This is basically to
+* reset all browser specific styles applied automatically, i.e. give the designer
+* a clean slate to work with. The others stylesheets may or may not override
+* the styles defined here.
+*/
+
+@import "./defaults.css";
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/**
+* Reset some basic elements
+*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+* Basic styling
+*/
+body {
+  font: var(--base-font-weight) calc(var(--base-font-size) / var(--base-line-height)) var(--base-font-family);
+  /* color: $text-color;
+  background-color: $background-color; */
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: calc(var(--spacing-unit) / 2);
+}
+
+/**
+* Set `margin-bottom` to maintain vertical rhythm
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure {
+  margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+/**
+* `main` element
+*/
+main {
+  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  margin-bottom: var(--spacing-unit);
+}
+
+/**
+* Headings
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings-font-family);
+  font-weight: var(--base-font-weight);
+}
+
+code {
+  background: #f7f7f7;
+}
