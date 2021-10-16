@@ -79,9 +79,13 @@ figure {
 * `main` element
 */
 main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  display: flex; 
+  width: 65%;
+  margin-left: 0.1vw;
+  margin-top: 1vh;
   margin-bottom: var(--spacing-unit);
   flex: 1;
+  overflow: hidden;
 }
 
 /**
@@ -97,6 +101,25 @@ h6 {
   font-weight: var(--base-font-weight);
 }
 
-code {
+code,pre {
   background: #f7f7f7;
+  overflow: scroll;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  table-layout: fixed;
+  display: block;
+  max-width: var(--max-width);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+img {
+  overflow: scroll;
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
 }

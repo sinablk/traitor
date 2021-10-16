@@ -5,15 +5,18 @@
 @import "./base.css";
 @import "./defaults.css";
 
+
 /**
-* Main page's posts list
-*/ 
-.posts-list {
-  max-width: var(--max-width);
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--spacing-unit);
-  padding-left: var(--spacing-unit);
+* `main` element
+*/
+main {
+  display: flex; 
+  width: 65%;
+  margin-left: 0.1vw;
+  margin-top: 1vh;
+  margin-bottom: var(--spacing-unit);
+  flex: 1;
+  overflow: hidden;
 }
 
 /**
@@ -30,6 +33,18 @@ footer {
   border-top: 1px solid black;
   padding: calc(var(--spacing-unit) / 2) 0;
   text-align: center;
+  overflow: hidden;
+  /* background-color: antiquewhite; */
+}
+
+/**
+* Main page's posts list
+*/ 
+.posts-list {
+  max-width: var(--max-width);
+  margin-left: auto;
+  padding-right: var(--spacing-unit);
+  padding-left: var(--spacing-unit);
 }
 
 /**
@@ -37,8 +52,23 @@ footer {
 */
 .post-content {
   max-width: var(--max-width);
-  margin-right: auto;
+  margin-right: 2%;
   margin-left: auto;
   padding-right: var(--spacing-unit);
   padding-left: var(--spacing-unit)
+}
+
+/**
+* Sidear
+*/
+.sidebar {
+  /* background-color: aliceblue; */
+  width: 16%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-left: 1px dotted;
+  height: 90%;
+  right: 20%;
+  margin-right: 10px;
+  position:fixed
 }
