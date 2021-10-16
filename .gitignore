@@ -1,0 +1,41 @@
+# User defined
+.bloop
+.g8
+.metals
+.vscode
+metals.sbt
+
+
+# Auto-generated
+*.class
+*.log
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+logs
+target
+/.bsp
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PI
+
+# https://github.com/github/gitignore/blob/master/PlayFramework.gitignore
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/project
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.eml
+/dist/
+.cache

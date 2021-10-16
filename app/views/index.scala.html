@@ -1,0 +1,10 @@
+@(posts: List[PostItem])
+
+@main("Traitor's Wiki :: Blog") {
+  <h1>Ali Sina's Wiki</h1>
+  <ul>
+    @for(post <- posts) {
+      <li><h3><a class="post-link" href="posts/@post.href">@post.title</a></h3></li>
+    }
+  </ul>
+}
