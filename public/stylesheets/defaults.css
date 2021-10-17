@@ -17,6 +17,8 @@
 
     --spacing-unit: 30px;
     --content-width: 800px;
-    --max-width: calc(var(--content-width) - (var(--spacing-unit) * 2))
+    --max-width: calc(var(--content-width) - (var(--spacing-unit) * 2));
+
+    --code-background-color: #f7f7f7;
 
 }

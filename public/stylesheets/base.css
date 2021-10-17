@@ -37,13 +37,8 @@ figure {
   padding: 0;
 }
 
-/**
-* Basic styling
-*/
 body {
   font: var(--base-font-weight) calc(var(--base-font-size) / var(--base-line-height)) var(--base-font-family);
-  /* color: $text-color;
-  background-color: $background-color; */
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -56,9 +51,6 @@ body {
   padding: calc(var(--spacing-unit) / 2);
 }
 
-/**
-* Set `margin-bottom` to maintain vertical rhythm
-*/
 h1,
 h2,
 h3,
@@ -75,11 +67,6 @@ figure {
   margin-bottom: calc(var(--spacing-unit) / 2);
 }
 
-
-
-/**
-* Headings
-*/
 h1,
 h2,
 h3,
@@ -90,20 +77,15 @@ h6 {
   font-weight: var(--base-font-weight);
 }
 
-code,pre {
-  background: #f7f7f7;
+pre {
+  background: var(--code-background-color);
+  border-radius: 3px;
+  padding: 8px 12px;
   overflow: scroll;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: none;
-  table-layout: fixed;
-  display: block;
-  max-width: var(--max-width);
-  overflow-x: auto;
-  white-space: nowrap;
+code {
+  line-height: var(--base-line-height);
 }
 
 img {
@@ -111,4 +93,25 @@ img {
   object-fit: contain;
   max-height: 100%;
   max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  table-layout: fixed;
+  font-size: small;
+  display: block;
+  max-width: var(--max-width);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table th {
+  background-color: #919191;
+  padding: calc(var(--spacing-unit) / 12) calc(var(--spacing-unit) / 6)
+}
+
+table td {
+  padding: calc(var(--spacing-unit) / 12) calc(var(--spacing-unit) / 6)
 }

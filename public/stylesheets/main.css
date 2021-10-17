@@ -31,7 +31,7 @@ main ul {
 */
 footer {
   border-top: 1px solid black;
-  padding: calc(var(--spacing-unit) / 2) 0;
+  padding: calc(var(--spacing-unit) / 4) 0;
   text-align: center;
   overflow: hidden;
   /* background-color: antiquewhite; */
@@ -54,8 +54,7 @@ footer {
 .post-content {
   max-width: var(--max-width);
   margin-left: auto;
-  padding-right: var(--spacing-unit);
-  padding-left: var(--spacing-unit);
+  padding: 0 var(--spacing-unit);
   border-right: 1px dotted;
 }
 
@@ -66,9 +65,9 @@ footer {
   /* background-color: aliceblue; */
   width: 20%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 10vh calc(var(--spacing-unit) / 2);
   height: 100%;
   right: 20%;
-  margin-right: 10px;
+  margin-right: 5px;
   /* position:fixed; */
 }
