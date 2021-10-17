@@ -24,6 +24,7 @@ class PostReader {
     }.toSeq
   }
 
+  // Parses the filename and constructs a PostItem from it
   def parseFilename(file: File): PostItem = {
     val Array(fileWithoutExt) = file.getName.split('.').dropRight(1)
     val title = fileWithoutExt.split('-').drop(3).mkString(" ").capitalize

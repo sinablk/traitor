@@ -35,7 +35,9 @@ Although decision trees can be used for both classification and regression probl
 
 However, decision trees do not have good prediction accuracy on unseen data. Their performance can be improved by a method known as **bagging** which takes [bootstrapped](https://alisiina.github.io/2019/02/13/resampling-methods.html) samples $B$ of the data, trains the model on $b$th sample and, in a regression setting, averages the predictions given by:
 
-$$\hat{f}_{bag}(x) = \frac{1}{B} \sum_{b=1}^B \hat{f}^{\ast b}(x)$$
+$$ 
+\hat{f}\_{bag}(x) = \frac{1}{B} \sum_{b=1}^B \hat{f}^{\ast b}(x) 
+$$
 
 In a classification setting, however, a _majority vote_ is taken to estimate accuracy, which is simply the most commonly occurring class in $B$ predictions.
 
