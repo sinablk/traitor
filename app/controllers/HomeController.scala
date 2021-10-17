@@ -11,7 +11,7 @@ import java.io.File
 import scala.io.Source
 import scala.util.Using
 
-import models.PostItem
+import models.{PostItem, PostReader}
 
 
 @Singleton
@@ -21,11 +21,8 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
   private val parser = Parser.builder().build()
   private val renderer = HtmlRenderer.builder().build()
 
-  val listOfPosts: List[PostItem] = List(
-    PostItem("Hello world", href = "2021-01-01-hello-world.md"),
-    PostItem("Scraping data off a webpage for visualization", href = "2021-01-02-scraping-data-off-a-webpage-for-visualization.md"),
-    PostItem("Geospatial plotting with Python", href = "2021-01-03-geospatial-plotting-with-python.md")
-  )
+  val reader = new PostReader
+  val listOfPosts: Vector[PostItem] = reader.getPublishedPosts()
 
   def index() = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.index(listOfPosts))
