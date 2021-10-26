@@ -2,11 +2,12 @@
  * This page handles the rendering of the blog pos article. It takes the title
  * of the blog post as a String and its content as HTML.
  *@
-@(title: String, content: Html)
+@(title: String, datePublished: String, content: Html)
 
 @base(title) {
     <div class="post-content">
         <h1>@title</h1>
+        <h4><em>@datePublished</em></h4>
 
         <article>
             @content

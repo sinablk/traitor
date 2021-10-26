@@ -8,7 +8,7 @@
         @for(post <- posts) {
           <div class="post">
             <li>
-              <h3><a class="post-link" href="posts/@post.href">@post.title</a></h3>
+              <h3><a class="post-link" href="posts/@post.href">@post.frontmatter.title</a></h3>
               <p class="summary">
                 Creating nice, clean, and informative plots is an art. In this brief post, 
                 I extract data from a website and plot the data using a few plotting rules of thumb, or just one - "Data looks better naked!
