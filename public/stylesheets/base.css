@@ -115,3 +115,10 @@ table th {
 table td {
   padding: calc(var(--spacing-unit) / 12) calc(var(--spacing-unit) / 6)
 }
+
+blockquote {
+  border-left: 4px solid #c2c2c2;
+  color: #727272;
+  font-size: 15px;
+  padding-left: calc(var(--spacing-unit) / 2);
+}

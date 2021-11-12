@@ -33,12 +33,19 @@ class PostReader {
   val dateFormatter: DateTimeFormatter = DateTimeFormat.forPattern("yyyy-MM-dd")
 
   private val allowedExts = Set("md", "markdown")
-  private val sep = "---"
 
-  // Simple method to get the extension of the file.
+  // The top and bottom separator used in frontmatter of blog posts
+  private val sep = "---" 
+
+  /**
+    * Simple method to get the extension of the file.
+    */
   def getExtension(file: File): String = file.getName.split('.').last
 
-  // Lists all Markdown posts in directory.
+  /**
+   * Lists all Markdown files (blog posts) in the `directory`.Returns a vector 
+   * of the filenames without the .md or .markdown extension.
+   */
   def listPosts(directory: String = "posts"): Vector[String] = {
     val dir = new File(directory)
 
@@ -49,13 +56,18 @@ class PostReader {
     filepaths.map(parseFilename(_)).toVector
   }
 
-  // Parses the filename and constructs a PostItem from it
+  /**
+    * Returns the name of the file (blog post) without the extension.
+    */
   def parseFilename(file: File): String = {
     val Array(fileWithoutExt) = file.getName.split('.').dropRight(1)
     file.getName
   }
 
-  def getPublishedPosts(): Vector[PostItem] = {
+  /**
+    * Simply returns a sequence of all the items sorted by the publish date.
+    */
+  def getSortedPublishedPosts(): Vector[PostItem] = {
     val posts = listPosts()   // temporary only!
     
     val toPublish = for {
@@ -66,10 +78,14 @@ class PostReader {
       PostItem(filepath.toString, frontmatter, html)
     }
 
-    toPublish
+    toPublish.sortBy(_.frontmatter.date)(Ordering[DateTime].reverse)
   }
 
 
+  /**
+    * Takes the raw content of the markdown post and returns the FrontMatter and
+    * content-as-HTML of the post.
+    */
   def parseArticle(content: String): (FrontMatter, Html) = {
     val indexOfSecond = content.indexOf(sep, 3) // first 3 are `---` as well
 
@@ -80,6 +96,9 @@ class PostReader {
     (parsedFrontmatter, renderedHtml)
   }
 
+  /**
+    * Parses the frontmatter as string and returns FrontMatter object.
+    */
   def parseFrontMatter(frontmatter: String): FrontMatter = {
     val meatOfFrontmatter = 
       frontmatter.trim.stripPrefix(sep).stripSuffix(sep).trim.split('\n')
@@ -101,6 +120,9 @@ class PostReader {
 
   }
 
+  /**
+    * Converts the raw text of .markdown file into parsed HTML page for rendering.
+    */
   def markdownToHtml(text: String): Html = {
     val document = parser.parse(text)
     val renderedHtml = renderer.render(document)
